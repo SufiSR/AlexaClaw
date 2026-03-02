@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "smart home",
+      "invocationName": "smartie bot",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -44,14 +44,14 @@
             }
           ],
           "samples": [
-            "thank you",
+            "danke",
             "bye",
-            "end",
-            "close",
-            "{exitPhrase} thank you",
+            "ende",
+            "schliessen",
+            "{exitPhrase} danke",
             "{exitPhrase} bye",
-            "{exitPhrase} end",
-            "{exitPhrase} close"
+            "{exitPhrase} ende",
+            "{exitPhrase} schliessen"
           ]
         }
       ],
