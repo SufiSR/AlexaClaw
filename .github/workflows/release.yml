@@ -100,7 +100,7 @@ jobs:
         with:
           tag_name: ${{ env.new_version }}
           release_name: ${{ env.new_version }}
-          body_path: ./release_notes.md
+          body: ""
           draft: false
           prerelease: false
 
