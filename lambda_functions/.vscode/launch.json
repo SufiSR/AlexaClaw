@@ -3,10 +3,10 @@
         {
             "type": "aws-sam",
             "request": "direct-invoke",
-            "name": "HomeAssistantAssist:lambda_function.lambda_handler (python3.12)",
+            "name": "AlexaClaw:lambda_function.lambda_handler (python3.12)",
             "invokeTarget": {
                 "target": "code",
-                "projectRoot": "${workspaceFolder}/HomeAssistantAssist",
+                "projectRoot": "${workspaceFolder}/AlexaClaw",
                 "lambdaHandler": "lambda_function.lambda_handler"
             },
             "lambda": {

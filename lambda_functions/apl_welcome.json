@@ -1,0 +1,54 @@
+{
+  "type": "APL",
+  "version": "1.6",
+  "theme": "dark",
+  "mainTemplate": {
+    "items": [
+      {
+        "type": "Container",
+        "width": "100vw",
+        "height": "100vh",
+        "backgroundColor": "#0f0f1a",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "padding": "30dp",
+        "items": [
+          {
+            "type": "Text",
+            "text": "AlexaClaw",
+            "fontSize": "64dp",
+            "fontWeight": "800",
+            "textAlign": "center",
+            "color": "#7c6af7",
+            "marginBottom": "24dp"
+          },
+          {
+            "type": "Text",
+            "text": "Divider",
+            "fontSize": "2dp",
+            "width": "40vw",
+            "backgroundColor": "#7c6af7",
+            "marginBottom": "24dp",
+            "opacity": 0.5
+          },
+          {
+            "type": "Text",
+            "text": "Welcome to AlexaClaw!",
+            "fontSize": "34dp",
+            "fontWeight": "600",
+            "textAlign": "center",
+            "color": "#ffffff"
+          },
+          {
+            "type": "Text",
+            "text": "Your AI voice assistant",
+            "fontSize": "20dp",
+            "textAlign": "center",
+            "color": "#a0a0b8",
+            "marginTop": "16dp"
+          }
+        ]
+      }
+    ]
+  }
+}

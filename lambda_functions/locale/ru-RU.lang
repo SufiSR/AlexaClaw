@@ -1,17 +1,13 @@
-echo_screen_welcome_text=Добро пожаловать в Home Assistant!
-echo_screen_click_text=Нажмите кнопку ниже, чтобы открыть вашу панель управления
-echo_screen_button_text=Открыть Home Assistant
+echo_screen_welcome_text=Добро пожаловать в AlexaClaw!
+echo_screen_click_text=Ваш голосовой помощник с ИИ
 
-alexa_speak_welcome_message=Добро пожаловать в голосовой помощник Home Assistant! Чем я могу помочь?
+alexa_speak_welcome_message=Добро пожаловать в AlexaClaw! Чем я могу помочь?
 alexa_speak_next_message=Привет снова, чем могу помочь сейчас?
 alexa_speak_question=Что-то ещё?
 alexa_speak_help=Чем могу помочь?
-alexa_speak_exit=До встречи!; Пока; Если я понадоблюсь, я здесь; Хорошо, ухожу; Удачи; Всё отлично; Спасибо, до свидания; Я ухожу, спасибо.
+alexa_speak_exit=До встречи!;Пока;Если я понадоблюсь, я здесь;Хорошо, ухожу;Удачи;Всё отлично;Спасибо, до свидания;Я ухожу, спасибо.
 alexa_speak_error=Извините, я не смог обработать ваш запрос.
-alexa_speak_timeout=Home Assistant слишком долго отвечает. Упростите команду и попробуйте снова!
-alexa_speak_open_dashboard=Открываю Home Assistant
+alexa_speak_timeout=Ассистент ИИ слишком долго отвечает. Упростите команду и попробуйте снова!
 alexa_speak_processing=<speak>Минуту пожалуйста</speak>
 
-keywords_to_open_dashboard=открыть панель; открыть Home Assistant
-
-keywords_to_close_skill=нет; ничего; всё; спасибо
+keywords_to_close_skill=нет;ничего;всё;спасибо

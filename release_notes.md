@@ -7,7 +7,7 @@
 - Added Dutch (Netherlands) language
 - Added Slovak (Slovakia) language
 - Added new configuration option `ask_for_further_commands` to control Alexa's behavior for asking further commands.
-- Start a conversation with prompt from Home Assistant (thanks to [t07que])
+- Added support for starting a conversation via a pre-set prompt (thanks to [t07que])
 - Fixed Issue #16
 - Added Spanish (Mexico) language
 - Added ASK feature support
@@ -28,7 +28,7 @@
 - Adicionado o idioma Holandês (Holanda)
 - Adicionado o idioma Eslovaco (Eslováquia)
 - Adicionada nova opção de configuração `ask_for_further_commands` para controlar o comportamento da Alexa ao perguntar por mais comandos.
-- Adicionado opção para iniciar uma conversa com Alexa a partir de um prompt do Home Assistant
+- Adicionado opção para iniciar uma conversa com a Alexa a partir de um prompt pré-definido
 - Corrigido o Issue #16
 - Adicionado o idioma espanhol (México)
 - Adicionado suporte à funcionalidade de perguntar à skill

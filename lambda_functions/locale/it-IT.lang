@@ -1,17 +1,13 @@
-echo_screen_welcome_text=Benvenuto su Home Assistant!
-echo_screen_click_text=Clicca sul pulsante qui sotto per aprire il tuo dashboard
-echo_screen_button_text=Apri Home Assistant
+echo_screen_welcome_text=Benvenuto su AlexaClaw!
+echo_screen_click_text=Il tuo assistente vocale IA
 
-alexa_speak_welcome_message=Benvenuto nell'assistente vocale di Home Assistant! Come posso aiutarti?
+alexa_speak_welcome_message=Benvenuto su AlexaClaw! Come posso aiutarti?
 alexa_speak_next_message=Ciao di nuovo, come posso aiutarti ora?
 alexa_speak_question=Qualcos'altro?
 alexa_speak_help=Come posso aiutarti?
 alexa_speak_exit=Arrivederci!;Ciao;Se hai bisogno sono qui;Ok, sto andando via;Ci vediamo;Grazie, arrivederci;Vado, grazie.
 alexa_speak_error=Scusa, non sono riuscito a processare la tua richiesta.
-alexa_speak_timeout=Home Assistant ha impiegato troppo tempo a rispondere. Semplifica il comando e riprova!
-alexa_speak_open_dashboard=A aprire il Home Assistant
+alexa_speak_timeout=L'assistente IA ha impiegato troppo tempo a rispondere. Semplifica il comando e riprova!
 alexa_speak_processing=<speak>Un momento per favore</speak>
-
-keywords_to_open_dashboard=aprire il pannello; aprire il home assistant
 
 keywords_to_close_skill=no;niente;questo è tutto

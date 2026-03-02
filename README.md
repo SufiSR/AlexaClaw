@@ -1,11 +1,13 @@
-# Home Assistant Assist Alexa Skill (AWS Hosted)
+# AlexaClaw — Alexa Skill for OpenAI-Compatible Endpoints (AWS Hosted)
 
-Alexa Skill that integrates Home Assistant Assist or your preferred Generative AI via the conversation API and also allows you to open your favorite dashboard on Echo Show.
+> **Forked from [fabianosan/HomeAssistantAssistAWS](https://github.com/fabianosan/HomeAssistantAssistAWS).**
+> A huge thank you to [fabianosan](https://github.com/fabianosan) for building such a clean, well-structured foundation — it made adapting this into AlexaClaw remarkably straightforward. Go give that repo a star!
+
+An Alexa skill that routes voice queries to any OpenAI-compatible API endpoint, enabling fully custom AI assistants powered by your own backend.
 
 ---
 
-_Note: This project is still in a very early alpha phase, this means not all features are fully functional yet and
-features or usage can change significantly between releases._
+_Note: This project is in active development. Features and configuration may change between releases._
 
 ### Table of Contents
 
@@ -17,44 +19,36 @@ features or usage can change significantly between releases._
 
 ## About
 
-This is an Alexa skill model that integrates Home Assistant Assist or your preferred Generative AI through the conversation API and also allows you to open your favorite dashboard on Echo Show devices.
+AlexaClaw is an AWS-hosted Alexa skill that forwards your spoken queries to an OpenAI-compatible HTTP endpoint — such as `alexa.fluxato.com` — and speaks the response back to you. It maintains multi-turn conversation history within each session and supports Echo Show devices with a welcome screen.
 
-**Note: The difference between this **(AWS Hosted)** and the [Alexa Hosted](https://github.com/fabianosan/HomeAssistantAssist) version is that this skill does not have the `8 seconds` limitation, uses Alexa Account Linking and have async calls _(Enabling the use of more complex `and slow` AI models)_** 
+The skill is hosted as an AWS Lambda function, meaning there is **no 8-second Alexa response limit** — a progressive acknowledgment sound is sent immediately while the AI processes your request in the background.
 
 ## Features
 
-- Voice command:
-    - Interact with [Home Assistant Assist](https://www.home-assistant.io/voice_control)
-    - Interact with [Open AI](https://www.home-assistant.io/integrations/openai_conversation) integration
-    - Interact with [Extended Open AI](https://github.com/jekalmin/extended_openai_conversation) integration
-    - Interact with [Google Generative AI](https://www.home-assistant.io/integrations/google_generative_ai_conversation) integration
-- Open Home Assistant dashboard:
-    - Open your prefered Home Assistant dashboard in Echo Show screen.
-    - Click on the Echo Show sceen to open your dashboard.
-
-- Supports SSML in Intent Scripts
-
-- Others:
-    - Start a conversation with prompt from Home Assistant (thanks to [t07que](https://github.com/t07que))
-    - Multi-language support _(see [Supported languages](#supported-languages))_
-
-If you have a feature idea, open a issue to suggest your idea for implementation.
+- **Voice query forwarding** — sends queries to any OpenAI-compatible endpoint (`POST /v1/chat/completions`)
+- **Multi-turn conversations** — maintains the full message history across turns within a session
+- **Optional system prompt** — configure a custom system prompt via environment variable
+- **Progressive acknowledgment** — plays "One moment please" while waiting for the AI response, bypassing Alexa's 8-second timeout
+- **Echo Show support** — displays a branded welcome screen on screen-enabled Alexa devices
+- **Multi-language support** — see [Supported languages](#supported-languages)
+- **Configurable behavior** — ask for follow-up commands, suppress greeting, and more
 
 ## Installation
 
-For instructions how to set this skill up refer to the [installation](doc/en/INSTALLATION.md) or [update](doc/en/UPDATE.md) page.
+For setup instructions refer to the [installation guide](doc/en/INSTALLATION.md) or [update guide](doc/en/UPDATE.md).
 
 ## How to use
 
-- Say `Alexa, open home smart` (or your defined skill invoication name):
-    - Turn on the kitchen lights.
-    - Open home assistant.
-    
-- Or say `Alexa, ask smart home to turn on kitchen lights` or `Alexa, ask smart home to open home assistant`:
+- Say `Alexa, open alexa claw` (or your configured skill invocation name):
+    - What is the weather like today?
+    - Tell me a joke.
+    - Summarize the news.
+
+- Or say `Alexa, ask alexa claw what is the capital of France`
 
 ## Supported languages
 
-The skill has support for the following languages:
+The skill supports the following languages:
 
 - German (Germany)
 - English (Australia)
@@ -74,19 +68,20 @@ The skill has support for the following languages:
 - Russian (Russia)
 - Slovak (Slovakia)
 
-Note: If your language is not supported, please open an `issue` attaching your own version of the file [en-US.lang](lambda_functions/locale/en-US.lang).
+Note: If your language is not supported, open an issue and attach your own version of [en-US.lang](lambda_functions/locale/en-US.lang).
 
 ---
 
+# AlexaClaw — Alexa Skill para Endpoints Compatíveis com OpenAI (AWS Hospedado)
 
+> **Bifurcado de [fabianosan/HomeAssistantAssistAWS](https://github.com/fabianosan/HomeAssistantAssistAWS).**
+> Um grande obrigado a [fabianosan](https://github.com/fabianosan) por construir uma base tão limpa e bem estruturada — isso tornou a adaptação para o AlexaClaw notavelmente simples. Vá dar uma estrela naquele repositório!
 
-# Home Assistant Assist Alexa Skill (AWS Hosted)
-
-Skill Alexa que integra o Home Assistant Assist ou sua IA Generativa preferida via a API de conversação e também permite abrir seu painel favorito no Echo Show
+Uma skill Alexa que encaminha consultas de voz para qualquer endpoint de API compatível com OpenAI, permitindo assistentes de IA totalmente personalizados alimentados pelo seu próprio backend.
 
 ---
 
-_Nota: Este projeto ainda está em uma fase alfa muito inicial, o que significa que nem todos os recursos estão totalmente funcionais e os recursos ou o uso podem mudar significativamente entre as versões._
+_Nota: Este projeto está em desenvolvimento ativo. Recursos e configurações podem mudar entre versões._
 
 ### Índice
 
@@ -98,37 +93,32 @@ _Nota: Este projeto ainda está em uma fase alfa muito inicial, o que significa 
 
 ## Sobre
 
-Este é um modelo de skill Alexa que integra o Home Assistant Assist ou sua IA Generativa preferida através da API de conversação e também permite abrir seu painel favorito em dispositivos Echo Show.
+AlexaClaw é uma skill Alexa hospedada na AWS que encaminha suas consultas de voz para um endpoint HTTP compatível com OpenAI — como `alexa.fluxato.com` — e reproduz a resposta para você. Mantém o histórico de conversa multi-turno em cada sessão e oferece suporte a dispositivos Echo Show com uma tela de boas-vindas.
 
-**Observação: a diferença entre esta versão **(hospedada na AWS)** e a versão [hospedada na Alexa](https://github.com/fabianosan/HomeAssistantAssist) é que esta habilidade não tem a limitação de `8 segundos`, usa o Alexa Account Linking e tem chamadas assíncronas _(permitindo o uso de modelos de IA `e lentos` mais complexos)_**
+A skill é hospedada como uma função AWS Lambda, o que significa que **não há limite de 8 segundos de resposta da Alexa** — um som de confirmação progressivo é enviado imediatamente enquanto a IA processa sua solicitação em segundo plano.
 
 ## Recursos
 
-- Comando de voz:
-    - Interagir com o [Home Assistant Assist](https://www.home-assistant.io/voice_control)
-    - Interagir com a integração [Open AI](https://www.home-assistant.io/integrations/openai_conversation)
-    - Interagir com a integração [Extended Open AI](https://github.com/jekalmin/extended_openai_conversation)
-    - Interagir com a integração [Google Generative AI](https://www.home-assistant.io/integrations/google_generative_ai_conversation)
-- Abrir painel do Home Assistant:
-    - Abra seu dashboard preferido do Home Assistant na tela do Echo Show.
-    - Clique na tela do Echo Show para abrir seu dashboard.
-- Outros:
-    - Iniciar uma conversa com a Alexa de um prompt do Home Assistant (agradecimento ao [t07que](https://github.com/t07que))
-    - Suporte a vários idiomas (veja [Idiomas suportados](#idiomas-suportados))
-
-Se você tiver uma ideia de recurso, abra um issue para sugerir sua ideia para implementação.
+- **Encaminhamento de consultas de voz** — envia consultas para qualquer endpoint compatível com OpenAI (`POST /v1/chat/completions`)
+- **Conversas multi-turno** — mantém o histórico completo de mensagens entre turnos dentro de uma sessão
+- **Prompt de sistema opcional** — configure um prompt de sistema personalizado via variável de ambiente
+- **Confirmação progressiva** — reproduz "Um momento por favor" enquanto aguarda a resposta da IA, contornando o timeout de 8 segundos da Alexa
+- **Suporte ao Echo Show** — exibe uma tela de boas-vindas em dispositivos Alexa com tela
+- **Suporte a vários idiomas** — veja [Idiomas suportados](#idiomas-suportados)
+- **Comportamento configurável** — solicitar comandos de acompanhamento, suprimir saudação e mais
 
 ## Instalação
 
-Para obter instruções sobre como configurar essa skill, consulte a página de [instalação](doc/pt/INSTALLATION.md) ou [atualização](doc/pt/UPDATE.md).
+Para instruções de configuração, consulte o [guia de instalação](doc/pt/INSTALLATION.md) ou o [guia de atualização](doc/pt/UPDATE.md).
 
 ## Como usar
 
-- Diga `Alexa, abrir casa inteligente` (ou o nome de invocação definido para a skill):
-    - Acenda as luzes da cozinha.
-    - Abra o home assistant.
-    
-- Ou diga `Alexa, peça para casa inteligente acender as luzes da cozinha` ou `Alexa, peça para casa inteligente abrir o Home Assistant`
+- Diga `Alexa, abrir alexa claw` (ou o nome de invocação configurado para a skill):
+    - Como está o tempo hoje?
+    - Me conta uma piada.
+    - Resuma as notícias.
+
+- Ou diga `Alexa, peça para alexa claw qual é a capital da França`
 
 ## Idiomas suportados
 
@@ -151,4 +141,3 @@ A skill tem suporte para os seguintes idiomas:
 - Português (Portugal)
 - Russo (Rússia)
 - Eslovaco (Eslováquia)
-

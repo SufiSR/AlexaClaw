@@ -1,17 +1,13 @@
-echo_screen_welcome_text=Witaj w Home Assistant!
-echo_screen_click_text=Kliknij przycisk poniżej aby otworzyć dashboard
-echo_screen_button_text=Otwórz Home Assistant
+echo_screen_welcome_text=Witaj w AlexaClaw!
+echo_screen_click_text=Twój asystent głosowy AI
 
-alexa_speak_welcome_message=Witaj w asystencie głosowym Home Assistant! W czym mogę pomóc?
+alexa_speak_welcome_message=Witaj w AlexaClaw! W czym mogę pomóc?
 alexa_speak_next_message=Witaj ponownie, w czym mogę pomóc?
 alexa_speak_question=Coś jeszcze?
 alexa_speak_help=Jak mogę Ci pomóc?
 alexa_speak_exit=Do zobaczenia!;Pa;Pozostaję do usług!;Ok, wyłączam się;Dzięki;Wszystko w porządku;Dzięki, do zobaczenia.;Wyłączam się, dzięki.
 alexa_speak_error=Przepraszam, nie potrafię spełnić twojego żądania.
-alexa_speak_timeout=Home Assistant potrzebował zbyt dużo czasu na odpowiedź. Uprość swoją komendę i spróbuj ponownie.
-alexa_speak_open_dashboard=Otwieram Home Assistant
+alexa_speak_timeout=Asystent AI potrzebował zbyt dużo czasu na odpowiedź. Uprość swoją komendę i spróbuj ponownie.
 alexa_speak_processing=<speak>Proszę chwilę zaczekać</speak>
-
-keywords_to_open_dashboard=otwórz dashboard; otwórz home assistant
 
 keywords_to_close_skill=to wszystko;nic więcej;wystarczy;dzięki;dziękuję
