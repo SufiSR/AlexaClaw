@@ -19,7 +19,7 @@ _Note: This project is in active development. Features and configuration may cha
 
 ## About
 
-AlexaClaw is an AWS-hosted Alexa skill that forwards your spoken queries to an OpenAI-compatible HTTP endpoint — such as `alexa.fluxato.com` — and speaks the response back to you. It maintains multi-turn conversation history within each session and supports Echo Show devices with a welcome screen.
+AlexaClaw is an AWS-hosted Alexa skill that forwards your spoken queries to an OpenAI-compatible HTTP endpoint — such as `alexa.funstuff.com` — and speaks the response back to you. It maintains multi-turn conversation history within each session and supports Echo Show devices with a welcome screen.
 
 The skill is hosted as an AWS Lambda function, meaning there is **no 8-second Alexa response limit** — a progressive acknowledgment sound is sent immediately while the AI processes your request in the background.
 
@@ -93,7 +93,7 @@ _Nota: Este projeto está em desenvolvimento ativo. Recursos e configurações p
 
 ## Sobre
 
-AlexaClaw é uma skill Alexa hospedada na AWS que encaminha suas consultas de voz para um endpoint HTTP compatível com OpenAI — como `alexa.fluxato.com` — e reproduz a resposta para você. Mantém o histórico de conversa multi-turno em cada sessão e oferece suporte a dispositivos Echo Show com uma tela de boas-vindas.
+AlexaClaw é uma skill Alexa hospedada na AWS que encaminha suas consultas de voz para um endpoint HTTP compatível com OpenAI — como `alexa.funstuff.com` — e reproduz a resposta para você. Mantém o histórico de conversa multi-turno em cada sessão e oferece suporte a dispositivos Echo Show com uma tela de boas-vindas.
 
 A skill é hospedada como uma função AWS Lambda, o que significa que **não há limite de 8 segundos de resposta da Alexa** — um som de confirmação progressivo é enviado imediatamente enquanto a IA processa sua solicitação em segundo plano.
 
@@ -141,3 +141,4 @@ A skill tem suporte para os seguintes idiomas:
 - Português (Portugal)
 - Russo (Rússia)
 - Eslovaco (Eslováquia)
+
