@@ -8,6 +8,6 @@ alexa_speak_help=Hoe kan ik je helpen?
 alexa_speak_exit=Tot later!;Dag!;Als je me nodig hebt, ben ik er;Oké, ik ga weg;Proost;Alles is goed;Bedankt, tot ziens.;Ik ga weg, bedankt.
 alexa_speak_error=Sorry, ik kon je verzoek niet verwerken.
 alexa_speak_timeout=De AI-assistent reageerde te traag. Vereenvoudig het commando en probeer het opnieuw!
-alexa_speak_processing=<speak>Een moment alstublieft</speak>
+alexa_speak_processing=<speak>Een moment alstublieft.</speak>;<speak>Even geduld.</speak>;<speak>Een seconde.</speak>;<speak>Direct.</speak>
 
 keywords_to_close_skill=nee;niets;dat is alles;bedankt
