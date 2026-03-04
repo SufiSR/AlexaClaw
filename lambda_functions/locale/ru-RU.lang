@@ -8,6 +8,6 @@ alexa_speak_help=Чем могу помочь?
 alexa_speak_exit=До встречи!;Пока;Если я понадоблюсь, я здесь;Хорошо, ухожу;Удачи;Всё отлично;Спасибо, до свидания;Я ухожу, спасибо.
 alexa_speak_error=Извините, я не смог обработать ваш запрос.
 alexa_speak_timeout=Ассистент ИИ слишком долго отвечает. Упростите команду и попробуйте снова!
-alexa_speak_processing=<speak>Минуту пожалуйста</speak>
+alexa_speak_processing=<speak>Минуту пожалуйста.</speak>;<speak>Секунду.</speak>;<speak>Сейчас.</speak>;<speak>Один момент.</speak>
 
 keywords_to_close_skill=нет;ничего;всё;спасибо
