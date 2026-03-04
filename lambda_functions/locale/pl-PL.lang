@@ -8,6 +8,6 @@ alexa_speak_help=Jak mogę Ci pomóc?
 alexa_speak_exit=Do zobaczenia!;Pa;Pozostaję do usług!;Ok, wyłączam się;Dzięki;Wszystko w porządku;Dzięki, do zobaczenia.;Wyłączam się, dzięki.
 alexa_speak_error=Przepraszam, nie potrafię spełnić twojego żądania.
 alexa_speak_timeout=Asystent AI potrzebował zbyt dużo czasu na odpowiedź. Uprość swoją komendę i spróbuj ponownie.
-alexa_speak_processing=<speak>Proszę chwilę zaczekać</speak>
+alexa_speak_processing=<speak>Proszę chwilę zaczekać.</speak>;<speak>Chwilę.</speak>;<speak>Jedną sekundę.</speak>;<speak>Zaraz.</speak>
 
 keywords_to_close_skill=to wszystko;nic więcej;wystarczy;dzięki;dziękuję
