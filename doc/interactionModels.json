@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "smartie bot",
+      "invocationName": "AlexaClaw",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
