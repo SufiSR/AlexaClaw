@@ -8,6 +8,6 @@ alexa_speak_help=Como posso te ajudar?
 alexa_speak_exit=Ate logo!;Tchau;Se precisar estou por aqui;Ok, tô indo nessa;Valeu;É nóis;Valeu. falou.;Fui, valeu.
 alexa_speak_error=Desculpe, não consegui processar sua solicitação.
 alexa_speak_timeout=O assistente de IA demorou muito para responder. Simplifique o comando e tente novamente!
-alexa_speak_processing=<speak>Um momento por favor</speak>
+alexa_speak_processing=<speak>Um momento por favor.</speak>;<speak>Um segundo.</speak>;<speak>Já já.</speak>;<speak>Deixa eu ver.</speak>
 
 keywords_to_close_skill=não;nada;só isso;obrigado
