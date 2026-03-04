@@ -12,8 +12,10 @@ import json
 import random
 import asyncio
 import uuid
-import requests
-import requests.exceptions
+import socket
+import urllib.request
+import urllib.error
+
 import ask_sdk_core.utils as ask_utils
 
 from ask_sdk_core.skill_builder import CustomSkillBuilder
@@ -130,7 +132,9 @@ def send_acknowledgment_sound(handler_input, request):
     if not request.request_id:
         return False
 
-    processing_msg = globals().get("alexa_speak_processing")
+    raw = globals().get("alexa_speak_processing", "")
+    parts = [p.strip() for p in raw.split(";") if p.strip()]
+    processing_msg = random.choice(parts) if parts else ""
     if not processing_msg:
         return False
 
@@ -185,8 +189,28 @@ class GptQueryIntentHandler(AbstractRequestHandler):
 
 
 # --------------------------------------------------
-# OpenClaw Communication
+# OpenClaw Communication (no requests)
 # --------------------------------------------------
+
+def _http_post_json(url: str, headers: dict, payload: dict, timeout_seconds: int = 20) -> tuple[int, str]:
+    """
+    Minimal JSON POST using Python stdlib (dependency-free).
+    Returns: (status_code, response_text)
+    """
+    body = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        url=url,
+        data=body,
+        headers=headers,
+        method="POST",
+    )
+
+    # Ensure timeout applies to connect+read in urllib
+    with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:
+        status = getattr(resp, "status", 200)  # status exists in py3
+        text = resp.read().decode("utf-8", errors="replace")
+        return status, text
+
 
 def process_conversation(query):
     global previous_response_id
@@ -200,25 +224,27 @@ def process_conversation(query):
             "Content-Type": "application/json",
         }
 
-        data = {
-            "input": query
-        }
-
+        data = {"input": query}
         if openclaw_model:
             data["model"] = openclaw_model
 
-        response = requests.post(
+        status_code, response_text = _http_post_json(
             f"{openclaw_url}/v1/responses",
             headers=headers,
-            json=data,
-            timeout=20
+            payload=data,
+            timeout_seconds=20
         )
 
-        if response.status_code != 200:
-            logger.error(f"HTTP error {response.status_code}: {response.text}")
+        if status_code != 200:
+            logger.error(f"HTTP error {status_code}: {response_text}")
             return globals().get("alexa_speak_error")
 
-        response_data = response.json()
+        try:
+            response_data = json.loads(response_text)
+        except Exception:
+            logger.error(f"Invalid JSON response: {response_text[:1000]}")
+            return globals().get("alexa_speak_error")
+
         content = ""
 
         # Chat Completion format
@@ -242,8 +268,22 @@ def process_conversation(query):
 
         return improve_response(content)
 
-    except requests.exceptions.Timeout:
+    except (socket.timeout, TimeoutError):
         logger.error("Timeout communicating with OpenClaw")
+        return globals().get("alexa_speak_timeout")
+
+    except urllib.error.HTTPError as e:
+        # HTTPError is also a file-like response; read body for logs
+        body = ""
+        try:
+            body = e.read().decode("utf-8", errors="replace")
+        except Exception:
+            pass
+        logger.error(f"HTTP error {e.code}: {body}")
+        return globals().get("alexa_speak_error")
+
+    except urllib.error.URLError as e:
+        logger.error(f"Network error communicating with OpenClaw: {e}")
         return globals().get("alexa_speak_timeout")
 
     except Exception as e:
