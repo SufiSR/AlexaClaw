@@ -8,6 +8,6 @@ alexa_speak_help=Ako vám môžem pomôcť?
 alexa_speak_exit=Majte sa!;Zbohom;Ak ma budete potrebovať, som tu;Dobre, odchádzam;Čauko;Všetko je v poriadku;Ďakujem, majte sa.;Odchádzam, ďakujem.
 alexa_speak_error=Prepáčte, požiadavku sa nepodarilo spracovať.
 alexa_speak_timeout=Asistent AI odpovedal príliš dlho. Zjednodušte príkaz a skúste to znova!
-alexa_speak_processing=<speak>Prosím, chvíľku počkajte</speak>
+alexa_speak_processing=<speak>Prosím, chvíľku počkajte.</speak>;<speak>Sekundu.</speak>;<speak>Hneď.</speak>;<speak>Chvíľu.</speak>
 
 keywords_to_close_skill=nie;nič;to je všetko;ďakujem
