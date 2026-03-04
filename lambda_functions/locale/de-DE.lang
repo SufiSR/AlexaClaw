@@ -1,13 +1,13 @@
 echo_screen_welcome_text=Willkommen bei AlexaClaw!
-echo_screen_click_text=Ihr KI-Sprachassistent
+echo_screen_click_text=Dein OpenClaw KI-Sprachassistent
 
-alexa_speak_welcome_message=Willkommen bei AlexaClaw! Wie kann ich Ihnen helfen?
-alexa_speak_next_message=Hallo nochmal, wie kann ich Ihnen jetzt weiterhelfen?
+alexa_speak_welcome_message=Willkommen bei AlexaClaw! Wie kann ich dir helfen?
+alexa_speak_next_message=Hey nochmal, wie kann ich Ihnen jetzt weiterhelfen?
 alexa_speak_question=Gibt es noch etwas?
-alexa_speak_help=Wie kann ich Ihnen behilflich sein?
+alexa_speak_help=Wie kann ich Dir behilflich sein?
 alexa_speak_exit=Bis bald!;Tschüss;Falls Sie mich benötigen, stehe ich Ihnen zur Verfügung;Okay, ich gehe dann mal;Danke;Alles klar;Danke, bis bald.;Ich bin dann mal weg, danke.
-alexa_speak_error=Entschuldigung, ich konnte Ihre Anfrage nicht verarbeiten.
-alexa_speak_timeout=Der KI-Assistent hat zu lange gebraucht, um zu antworten. Bitte vereinfachen Sie den Befehl und versuchen Sie es erneut!
-alexa_speak_processing=<speak>Einen Moment bitte, ich bin dran.</speak>
+alexa_speak_error=Sorry, irgendwas ist schiefgelaufen. Frage mal den Admin, was los ist.
+alexa_speak_timeout=Oh oh, diesmal hat es einfach zu lange gedauert. Irgendwas stimmt da nicht. Frag mal den Admin!
+alexa_speak_processing=<speak>Moment, ich bin dran.</speak>;<speak>Wart mal kurz, ich schaue nach.</speak>;<speak>Sekunde, ich muss nachschauen</speak>;<speak>Ich schaue nach.</speak>
 
 keywords_to_close_skill=nein;nichts;das wars;danke
