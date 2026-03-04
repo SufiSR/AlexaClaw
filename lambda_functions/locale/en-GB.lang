@@ -8,6 +8,6 @@ alexa_speak_help=How can I help you?
 alexa_speak_exit=See you later!;Bye;If you need me, I'm here;Ok, I'm off;Cheers;It's all good;Thanks, see ya.;I'm off, thanks.
 alexa_speak_error=Sorry, I couldn't process your request.
 alexa_speak_timeout=The AI assistant took too long to respond. Please try again!
-alexa_speak_processing=<speak>One moment please.</speak>
+alexa_speak_processing=<speak>One moment please.</speak>;<speak>Just a second.</speak>;<speak>Give me a moment.</speak>;<speak>Coming right up.</speak>
 
 keywords_to_close_skill=no;nothing;just that;thanks
